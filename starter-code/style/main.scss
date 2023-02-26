@@ -1,0 +1,15 @@
+@use './partials/cards' as *;
+@use './partials/footer' as *;
+@use './partials/header' as *;
+@use './partials/hero' as *;
+@use './partials/mixins' as *;
+@use './partials/variables' as *;
+
+
+
+body {
+    margin:0;
+    box-sizing: border-box;
+    font-family: $font;
+    background: $primary-bg-color;
+}

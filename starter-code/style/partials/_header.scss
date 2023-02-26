@@ -1,0 +1,22 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+.navbar {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 8vw;
+    &__button{
+        background-color: $primary-text;
+        color:$primary-color;
+        font-size: 1.125rem;
+        font-weight: 700;
+        padding: 15px 30px;
+        border:none;
+        border-radius: 28px;
+    }
+    &__img{
+        width:7.7vw;
+        height:1.5vh
+    }
+}

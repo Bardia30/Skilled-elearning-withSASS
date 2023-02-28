@@ -2,21 +2,13 @@
 @use './variables' as *;
 
 .navbar {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 4.3vh 11.5vw;
+    @include flex($justify:space-between);
+    @include nav-foot-padding;
     &__button{
-        background-color: $primary-text;
-        color:$primary-color;
-        font-size: 1.125rem;
-        font-weight: 700;
-        padding: 15px 30px;
-        border:none;
-        border-radius: 28px;
+        @include button;
+        @include hover3;
     }
     &__img{
-        width:7.7vw;
-        height:3vh
+        @include logo-img;
     }
 }

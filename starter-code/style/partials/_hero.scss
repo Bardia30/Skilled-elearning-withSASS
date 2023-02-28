@@ -2,46 +2,30 @@
 @use './variables' as *;
 
 .hero {
-    display:flex;
-    align-items: center;
+    @include flex($justify:normal);
     padding: 2vh 11.5vw;
     height: 60vh;
     margin-bottom:15vh;
     &--left {
-        display:flex;
-        flex-direction: column;
-        align-items: flex-start;
+        @include flex($direction:column, $align:flex-start, $justify:normal);
         height:19.5vh;
-        position: relative;
-        top: -20vh;
+        @include position($top:-20vh);
     }
     &__img{
-        position: relative;
-        right:-10vw;
-        top:-8vh;
+        @include position($right:-10vw, $top:-8vh);
         z-index:-1;
     }
     &__h1 {
-        font-size:3.5rem;
-        font-weight: 800;
-        color:$primary-text;
+        @include font($size:3.5rem);
         width:32vw;
     }
     &__p{
-        font-size:1.125rem;
-        font-weight: 500;
-        color:$secondary-text;
+        @include font($weight:500, $color:$secondary-text);
         line-height: 28px;
         margin-bottom:4vh;
     }
     &__button{
-        background: $gradient-color-card;
-        color: $primary-color;
-        font-size: 1.125rem;
-        font-weight: 700;
-        padding: 15px 30px;
-        border:none;
-        border-radius: 28px;
+        @include button($bg-color:$gradient-color-card);
+        @include hover;
     }
-
 }

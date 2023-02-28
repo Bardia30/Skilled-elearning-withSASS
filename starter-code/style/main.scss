@@ -6,10 +6,6 @@
 @use './partials/variables' as *;
 
 
-
 body {
-    margin:0;
-    box-sizing: border-box;
-    font-family: $font;
-    background: $primary-bg-color;
+    @include body-defaults;
 }

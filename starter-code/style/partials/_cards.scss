@@ -3,9 +3,7 @@
 
 
 .cards-section {
-    display: flex; 
-    flex-wrap: wrap;
-    justify-content: space-around;
+    @include flex($wrap:wrap, $align:normal);
     padding: 0.25vh 8vw;
     row-gap:4vw;
     column-gap: 1.25vw;
@@ -13,53 +11,32 @@
 }
 
 .card {
-    width:24vw;
-    height: 36vh;
-    border-radius: 15px;
-    padding: 4vh 1.5vw 0 1.5vw;
-    background: $primary-color;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include card;
     &--special {
         background: $gradient-color-card;
     }
     &__img {
         align-self: flex-start;
-        position: relative;
-        top:-7.75vh;
+        @include position($top:-7.75vh);
     }
     &__h2{
-        color:$primary-color;
-        font-size: 2rem;
-        font-weight: 800;
+        @include font($color:$primary-color, $size:2rem);
         width:20vw;
     }
     &__h3{
-        color:$primary-text;
-        font-weight:800;
-        font-size: 1.5rem;
-        transform: translateY(-8vh);
-        &--translate{
-            transform: translateY(-9vh);
-        }
+        @include font($size:1.5rem);
+        @include trans;
     }
     &__p{
-        color:$secondary-text;
-        font-weight:500;
-        font-size: 1.125rem;
+        @include font($color:$secondary-text, $weight:500);
         line-height: 28px;
         width:20vw;
-        transform: translateY(-8vh);
-        &--translate{
-            transform:translateY(-9.85vh);
-        }
+        @include trans($Y:-9.85vh);
     }
     &__a {
         text-decoration: none;
-        color: $hyperlink-color;
-        font-weight: 700;
-        font-size: 1.125rem;
+        @include font($weight:700, $color:$hyperlink-color);
         transform: translateY(-5vh);
+        @include hover2;
     }
 }

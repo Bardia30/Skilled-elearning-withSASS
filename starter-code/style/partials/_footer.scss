@@ -4,21 +4,13 @@
 
 .footer {
     background: $primary-text;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 4.3vh 11.5vw;
+    @include flex($justify:space-between);
+    @include nav-foot-padding;
     &__img{
-        width:7.7vw;
-        height:3vh
+        @include logo-img;
     }
     &__button{
-        background: $gradient-color-button;
-        color: $primary-color;
-        font-size: 1.125rem;
-        font-weight: 700;
-        padding: 15px 30px;
-        border:none;
-        border-radius: 28px;
+        @include button($bg-color: $gradient-color-button);
+        @include hover;
     }
 }

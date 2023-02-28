@@ -1,2 +1,101 @@
-
 @use './variables' as *;
+
+@mixin body-defaults{
+    margin:0;
+    box-sizing: border-box;
+    font-family: $font;
+    background: $primary-bg-color;
+}
+
+
+@mixin position($pos:relative, $top:auto, $bottom:auto, $right:auto, $left:auto) {
+    position: $pos;
+    top: $top;
+    bottom:$bottom;
+    left:$left;
+    right:$right;
+}
+
+
+@mixin flex($align: center, $justify:space-around, $direction:row, $wrap: nowrap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction:$direction;
+    flex-wrap:$wrap;
+}
+
+
+@mixin font($size:1.125rem, $weight: 800, $color:$primary-text) {
+    font-size:$size;
+    font-weight:$weight;
+    color: $color;
+}
+
+@mixin card{
+    width:24vw;
+    height: 36vh;
+    border-radius: 15px;
+    padding: 4vh 1.5vw 0 1.5vw;
+    background: $primary-color;
+    @include flex($direction:column, $justify:space-between, $align:normal);
+}
+
+
+@mixin button($bg-color:$primary-text) {
+    background: $bg-color;
+    color:$primary-color;
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: 15px 30px;
+    border:none;
+    border-radius: 28px;
+}
+
+@mixin hover{
+    cursor: pointer;
+    transition: 0.5s ease-out;
+    &:hover{
+        box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.5);
+    }
+}
+
+@mixin hover2{
+    cursor: pointer;
+    transition: 0.5s ease-out;
+    &:hover{
+        @include hover-get-started()
+    }
+}
+@mixin hover3{
+    cursor: pointer;
+    transition: 0.5s ease-out;
+    &:hover{
+        @include hover-header()
+    }
+}
+
+@mixin hover-get-started(){
+    color:$hover-button-color2;
+}
+
+@mixin hover-header(){
+    background-color:$hover-button-color;
+}
+
+
+@mixin logo-img{
+    width:7.7vw;
+    height:3vh;
+}
+
+@mixin nav-foot-padding {
+    padding: 4.3vh 11.5vw;
+}
+
+@mixin trans($Y:-9vh){
+    transform: translateY(-8vh);
+        &--translate{
+            transform: translateY($Y);
+        }
+}

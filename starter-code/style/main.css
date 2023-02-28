@@ -6,17 +6,26 @@
   row-gap: 4vw;
   -moz-column-gap: 1.25vw;
        column-gap: 1.25vw;
+  margin-bottom: 15vh;
 }
 
 .card {
   width: 24vw;
-  height: 17.45vh;
+  height: 36vh;
   border-radius: 15px;
-  padding: 1vh 1.5vw;
+  padding: 4vh 1.5vw 0 1.5vw;
   background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .card--special {
   background: linear-gradient(#F02AA6, #FF6F48);
+}
+.card__img {
+  align-self: flex-start;
+  position: relative;
+  top: -7.75vh;
 }
 .card__h2 {
   color: #FFFFFF;
@@ -24,11 +33,60 @@
   font-weight: 800;
   width: 20vw;
 }
+.card__h3 {
+  color: #13183F;
+  font-weight: 800;
+  font-size: 1.5rem;
+  transform: translateY(-8vh);
+}
+.card__h3--translate {
+  transform: translateY(-9vh);
+}
+.card__p {
+  color: #83869A;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 28px;
+  width: 20vw;
+  transform: translateY(-8vh);
+}
+.card__p--translate {
+  transform: translateY(-9.85vh);
+}
+.card__a {
+  text-decoration: none;
+  color: #F74780;
+  font-weight: 700;
+  font-size: 1.125rem;
+  transform: translateY(-5vh);
+}
+
+.footer {
+  background: #13183F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4.3vh 11.5vw;
+}
+.footer__img {
+  width: 7.7vw;
+  height: 3vh;
+}
+.footer__button {
+  background: linear-gradient(#4851FF, #F02AA4);
+  color: #FFFFFF;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 28px;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2vh 8vw;
+  padding: 4.3vh 11.5vw;
 }
 .navbar__button {
   background-color: #13183F;
@@ -41,14 +99,15 @@
 }
 .navbar__img {
   width: 7.7vw;
-  height: 1.5vh;
+  height: 3vh;
 }
 
 .hero {
   display: flex;
   align-items: center;
-  padding: 0.25vh 8vw;
-  height: 40vh;
+  padding: 2vh 11.5vw;
+  height: 60vh;
+  margin-bottom: 15vh;
 }
 .hero--left {
   display: flex;
@@ -56,7 +115,7 @@
   align-items: flex-start;
   height: 19.5vh;
   position: relative;
-  top: -2vh;
+  top: -20vh;
 }
 .hero__img {
   position: relative;
@@ -75,7 +134,7 @@
   font-weight: 500;
   color: #83869A;
   line-height: 28px;
-  margin-bottom: 2vh;
+  margin-bottom: 4vh;
 }
 .hero__button {
   background: linear-gradient(#F02AA6, #FF6F48);

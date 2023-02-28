@@ -8,20 +8,26 @@
     justify-content: space-around;
     padding: 0.25vh 8vw;
     row-gap:4vw;
-   column-gap: 1.25vw;
+    column-gap: 1.25vw;
+    margin-bottom:15vh;
 }
 
 .card {
     width:24vw;
-    height: 17.45vh;
+    height: 36vh;
     border-radius: 15px;
-    padding: 1vh 1.5vw;
+    padding: 4vh 1.5vw 0 1.5vw;
     background: $primary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     &--special {
         background: $gradient-color-card;
     }
     &__img {
-
+        align-self: flex-start;
+        position: relative;
+        top:-7.75vh;
     }
     &__h2{
         color:$primary-color;
@@ -30,12 +36,30 @@
         width:20vw;
     }
     &__h3{
-
+        color:$primary-text;
+        font-weight:800;
+        font-size: 1.5rem;
+        transform: translateY(-8vh);
+        &--translate{
+            transform: translateY(-9vh);
+        }
     }
     &__p{
-
+        color:$secondary-text;
+        font-weight:500;
+        font-size: 1.125rem;
+        line-height: 28px;
+        width:20vw;
+        transform: translateY(-8vh);
+        &--translate{
+            transform:translateY(-9.85vh);
+        }
     }
-    &__a{
-
+    &__a {
+        text-decoration: none;
+        color: $hyperlink-color;
+        font-weight: 700;
+        font-size: 1.125rem;
+        transform: translateY(-5vh);
     }
 }

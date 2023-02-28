@@ -1,2 +1,24 @@
 @use './mixins' as *;
 @use './variables' as *;
+
+
+.footer {
+    background: $primary-text;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4.3vh 11.5vw;
+    &__img{
+        width:7.7vw;
+        height:3vh
+    }
+    &__button{
+        background: $gradient-color-button;
+        color: $primary-color;
+        font-size: 1.125rem;
+        font-weight: 700;
+        padding: 15px 30px;
+        border:none;
+        border-radius: 28px;
+    }
+}

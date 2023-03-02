@@ -4,13 +4,34 @@
 
 .footer {
     background: $primary-text;
-    @include flex($justify:space-between);
+    @include flex($direction:column,$justify:center);
+    row-gap:2vh;
     @include nav-foot-padding;
     &__img{
-        @include logo-img;
+        width:20vw;
+        height:3vh;
     }
     &__button{
         @include button($bg-color: $gradient-color-button);
         @include hover;
+    }
+    @include tablet-ver {
+        @include flex($justify:space-between);
+        &__img{
+            width:15vw;
+            height:3vh;
+        }
+    }
+
+    @include tablet-hor {
+        &__img{
+            width:10vw;
+            height:3vh;
+        }
+    }
+    @include desktop {
+        &__img{
+            @include logo-img;
+        }
     }
 }

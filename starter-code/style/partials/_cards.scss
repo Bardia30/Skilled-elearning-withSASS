@@ -5,13 +5,28 @@
 .cards-section {
     @include flex($wrap:wrap, $align:normal);
     padding: 0.25vh 8vw;
-    row-gap:4vw;
+    row-gap:10vw;
     column-gap: 1.25vw;
     margin-bottom:15vh;
+    @include tablet-ver{
+        row-gap:6vw;
+    }
+
+    @include tablet-hor {
+        
+    }
+
+    @include desktop {
+
+    }
 }
 
 .card {
     @include card;
+    width:50vw;
+    height:40vh;
+    align-items: center;
+    text-align: center;
     &--special {
         background: $gradient-color-card;
     }
@@ -30,7 +45,7 @@
     &__p{
         @include font($color:$secondary-text, $weight:500);
         line-height: 28px;
-        width:20vw;
+        width:40vw;
         @include trans($Y:-9.85vh);
     }
     &__a {
@@ -38,5 +53,25 @@
         @include font($weight:700, $color:$hyperlink-color);
         transform: translateY(-5vh);
         @include hover2;
+    }
+
+    @include tablet-ver{
+        width:30vw;
+        height:40vh;
+        &__p{
+            font-size:1rem;
+            width:20vw;
+        }
+        &__a{
+            font-size:1rem;
+        }
+    }
+
+    @include tablet-hor {
+    }
+
+    @include desktop {
+        width:24vw;
+        @include flex($direction:column, $justify:space-between, $align:normal);
     }
 }

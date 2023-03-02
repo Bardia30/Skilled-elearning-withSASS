@@ -2,13 +2,34 @@
 @use './variables' as *;
 
 .navbar {
-    @include flex($justify:space-between);
+    @include flex($direction:column,$justify:center);
+    row-gap:2vh;
     @include nav-foot-padding;
     &__button{
         @include button;
         @include hover3;
     }
     &__img{
-        @include logo-img;
+        width:20vw;
+        height:3vh;
+    }
+    @include tablet-ver {
+        @include flex($justify:space-between);
+        &__img{
+            width:15vw;
+            height:3vh;
+        }
+    }
+
+    @include tablet-hor {
+        &__img{
+            width:10vw;
+            height:3vh;
+        }
+    }
+    @include desktop {
+        &__img{
+            @include logo-img;
+        }
     }
 }

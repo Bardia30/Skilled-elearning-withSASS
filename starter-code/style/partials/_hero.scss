@@ -2,22 +2,23 @@
 @use './variables' as *;
 
 .hero {
-    @include flex($justify:normal);
+    @include flex($direction:column, $justify:center, $align:center);
     padding: 2vh 11.5vw;
-    height: 60vh;
-    margin-bottom:15vh;
+    height:150vh;
+    margin-bottom:0;
     &--left {
-        @include flex($direction:column, $align:flex-start, $justify:normal);
         height:19.5vh;
-        @include position($top:-20vh);
+        @include flex($align:center, $justify:center, $direction:column);
+        @include position($top:0vh);
+        text-align: center;
     }
     &__img{
-        @include position($right:-10vw, $top:-8vh);
         z-index:-1;
+        @include position($right:-35vw, $top:-15vh);
     }
     &__h1 {
         @include font($size:3.5rem);
-        width:32vw;
+        width:80vw;
     }
     &__p{
         @include font($weight:500, $color:$secondary-text);
@@ -28,4 +29,56 @@
         @include button($bg-color:$gradient-color-card);
         @include hover;
     }
+    @include tablet-ver {
+        &--left{
+            @include flex($align:center, $justify:center, $direction:column);
+            @include position($top:0vh);
+            text-align: center;
+        }
+        &__img {
+            top:0vh;
+            left:10vw;
+            transform: scale(0.8);
+        }
+        &__h1{
+            width:75vw;
+        }
+    }
+
+    @include tablet-hor {
+        @include flex($justify:normal);
+        height: 60vh;
+        margin-bottom: 0;
+        &--left{
+            @include flex($direction:column, $align:flex-start, $justify:normal);
+            height:19.5vh;
+            @include position($top:-20vh);
+            text-align: left;
+        }
+        &__img{
+            @include position($right:10vw, $top:-15vh);
+            transform: scale(0.9);
+        }
+        &__h1{
+            width:32vw;
+            font-size: 2rem;
+        }
+        &__p{
+            font-size: 1rem;
+        }
+    }
+    @include desktop {
+        margin-bottom:15vh;
+        &__img{
+            @include position($right:-5vw, $top:-15vh);
+            transform: scale(1);
+        }
+        &__h1 {
+            @include font($size:3.5rem);
+            
+        }
+        &__p{
+            font-size: 1.125rem;
+        }
+        }
 }

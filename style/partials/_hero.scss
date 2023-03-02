@@ -14,7 +14,7 @@
     }
     &__img{
         z-index:-1;
-        @include position($right:-35vw, $top:-15vh);
+        @include position($right:-35vw, $top:-10vh);
     }
     &__h1 {
         @include font($size:3.5rem);
@@ -56,7 +56,7 @@
             text-align: left;
         }
         &__img{
-            @include position($right:10vw, $top:-15vh);
+            @include position($right:2vw, $top:-15vh);
             transform: scale(0.9);
         }
         &__h1{
@@ -70,7 +70,7 @@
     @include desktop {
         margin-bottom:15vh;
         &__img{
-            @include position($right:-5vw, $top:-15vh);
+            @include position($right:-5vw, $top:-10vh);
             transform: scale(1);
         }
         &__h1 {

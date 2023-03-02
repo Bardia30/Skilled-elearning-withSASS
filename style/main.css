@@ -15,6 +15,7 @@
     row-gap: 6vw;
   }
 }
+
 .card {
   width: 24vw;
   height: 36vh;
@@ -84,6 +85,7 @@
   .card {
     width: 30vw;
     height: 40vh;
+    text-align: left;
   }
   .card__p {
     font-size: 1rem;
@@ -238,7 +240,7 @@
 .hero__img {
   z-index: -1;
   position: relative;
-  top: -15vh;
+  top: -10vh;
   bottom: auto;
   left: auto;
   right: -35vw;
@@ -322,7 +324,7 @@
     top: -15vh;
     bottom: auto;
     left: auto;
-    right: 10vw;
+    right: 2vw;
     transform: scale(0.9);
   }
   .hero__h1 {
@@ -339,7 +341,7 @@
   }
   .hero__img {
     position: relative;
-    top: -15vh;
+    top: -10vh;
     bottom: auto;
     left: auto;
     right: -5vw;
